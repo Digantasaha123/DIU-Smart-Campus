@@ -63,3 +63,4 @@ Use your keyboard to interact with the simulation:
 Ensure `freeglut` is linked in your project settings.
 ```bash
 -lfreeglut -lopengl32 -lglu32
+
