@@ -1,93 +1,65 @@
-DIU Smart Campus Simulation (OpenGL)
-A 2D Computer Graphics simulation of the Daffodil International University (DIU) campus, built using C++ and OpenGL (GLUT). This project demonstrates core graphics algorithms, geometric transformations, and interactive animation logic to create a "Smart City" environment.
+# 🏫 DIU Smart Campus Simulation (OpenGL)
 
-🎥 Watch Demo Video
+A 2D Computer Graphics simulation of the **Daffodil International University (DIU)** campus, built using **C++** and **OpenGL (GLUT)**. This project demonstrates core graphics algorithms, geometric transformations, and interactive animation logic to create a "Smart City" environment.
 
-🚀 Key Features
-Day/Night Cycle: Dynamic lighting changes based on a simulated time of day. Street lights automatically turn on at night.
+## 🚀 Key Features
 
-Smart Traffic System:
+### 1. 🌤️ Dynamic Environment
+* **Day/Night Cycle:** Realistic lighting changes based on simulated time.
+* **Smart Lighting:** Street lights automatically turn on when the sun goes down.
 
-Cars respect traffic lights (stop on Red, go on Green).
+### 2. 🚦 Smart Traffic System
+* **Traffic Control:** Cars automatically stop at **Red Lights** and move on **Green Lights**.
+* **Collision Avoidance:** Intelligent braking logic prevents cars from crashing into each other.
 
-Collision avoidance logic (cars stop if too close to the car in front).
+### 3. 🌬️ Interactive Physics
+* **Wind Simulation:** Adjustable wind speed affects:
+    * Trees (swaying animation).
+    * Balloons (bobbing intensity).
+    * Clouds (movement speed).
+* **Security Gate:** Interactive entry gate that can be raised or lowered.
 
-Interactive Physics:
+### 4. ⚡ Renewable Energy & Landmarks
+* **Windmills:** Rotating windmills that can be toggled on/off.
+* **Solar Panels:** Models of green energy infrastructure.
+* **Architecture:** Custom drawing of AB-04, Clock Tower, and Trees.
 
-Wind Simulation: Trees sway and balloons bob based on adjustable wind levels.
+---
 
-Gate Control: Interactive security gate that lifts and closes.
+## 🎮 Controls
 
-Campus Landmarks:
+Use your keyboard to interact with the simulation:
 
-Academic Building (AB-04).
+| Key | Action | Details |
+| :--- | :--- | :--- |
+| **`D`** | **Day/Night** | Advance time manually to see lighting changes. |
+| **`W`** | **Wind Control** | Increase wind intensity (Levels: 0, 1, 2, 3). |
+| **`S`** | **Windmill** | Start or Stop the windmill rotation. |
+| **`G`** | **Gate** | Open or Close the main security gate. |
+| **`ESC`** | **Exit** | Close the program. |
 
-Solar Panels & Windmills (Renewable Energy).
+---
 
-Clock Tower.
+## 🛠️ Tech Stack & Algorithms
 
-Core Algorithms: Implementation of Midpoint Circle and Bresenham's Line algorithms.
+* **Language:** C++
+* **Library:** OpenGL (GLUT/FreeGLUT)
+* **Core Concepts:**
+    * **Midpoint Circle Algorithm:** Used for drawing circular objects (Sun, Wheels, Balloons).
+    * **Bresenham's Line Algorithm:** Used for structural lines and rays.
+    * **2D Transformations:** Translation, Rotation, and Scaling for animations.
 
-🎮 Controls
-Interact with the simulation using the keyboard:
+---
 
-Key	Action
-D	Advance Time (Cycle through Day/Night)
-W	Change Wind Level (0 to 3 intensity levels)
-S	Toggle Windmill (Start/Stop spinning)
-G	Toggle Gate (Open/Close security gate)
-ESC	Exit the program
+## ⚙️ How to Run
 
-🛠️ Tech Stack & Algorithms
-Language: C++
+### Prerequisites
+* C++ Compiler (GCC/MinGW)
+* OpenGL & GLUT Libraries
 
-Library: OpenGL (GLUT/FreeGLUT)
+### Compilation Commands
 
-Concepts Used:
-
-Primitives: GL_POINTS, GL_LINES, GL_TRIANGLES, GL_QUADS, GL_POLYGON.
-
-Transformations: glTranslatef (Movement), glRotatef (Animation), glScalef.
-
-Custom Algorithms:
-
-Midpoint Circle Algorithm (for celestial bodies/wheels).
-
-Bresenham's Line Algorithm (for structural lines).
-
-⚙️ How to Run
-Prerequisites
-You need a C++ compiler and OpenGL/GLUT libraries installed.
-
-Compilation
-On macOS (using Terminal):
-
-Bash
-
-g++ main.cpp -o main -framework OpenGL -framework GLUT -Wno-deprecated
-./main
-On Linux (Ubuntu/Debian):
-
-Bash
-
-# Install dependencies if not present
-sudo apt-get install freeglut3-dev
-
-# Compile and Run
-g++ main.cpp -o main -lGL -lGLU -lglut
-./main
-On Windows (Code::Blocks / MinGW):
-
-Ensure GLUT/FreeGLUT is linked in your linker settings (-lfreeglut -lopengl32 -lglu32).
-
-Build and Run the project.
-
-📂 Project Structure
-main.cpp: Contains the source code, including the display() function, state updates, and drawing logic for cars, buildings, and environment.
-
-👨‍💻 Author
-Name: [Your Name]
-
-University: Daffodil International University (DIU)
-
-Department: Computer Science and Engineering
+**On Windows (Code::Blocks / MinGW):**
+Ensure `freeglut` is linked in your project settings.
+```bash
+-lfreeglut -lopengl32 -lglu32
